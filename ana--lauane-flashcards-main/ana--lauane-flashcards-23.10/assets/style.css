@@ -58,6 +58,7 @@
   .cartao__conteudo__resposta p {
     color: var(--card-back-color);
     font-weight: 700;
+
   }
   
   .cartao:hover .cartao__conteudo {
@@ -70,16 +71,20 @@
     position: absolute;
     height: 100%;
     width: 100%;
+    box-sizing: border-box;
   }
   
   .cartao__conteudo__resposta {
-    transform: rotateY(180deg)
+    transform: rotateY(180deg);
+    background-color: rgba(0, 244, 191, 0.2);
+    border:after 4px solid var(--card-back-color);
   }
   
   .cartao__conteudo p {
     margin-top: 1rem;
     padding: 2rem;
     margin-top: 4rem;
+    font-size: 1.4vw;
   }
   
   #container {
@@ -89,3 +94,18 @@
     padding: 4rem;
     gap: 3rem;
   }
+
+  @media (max-width: 560px) {
+    body {
+    background: url('img/bg-mobile.webp');
+    }
+    }
+    .cartao {
+      flex: 1 0 calc(100% - 1rem)
+      }
+      .cartao__conteudo h3 {
+        font-size: 3vw;
+        }
+        .cartao__conteudo p {
+        font-size: 3.8vw;
+        }
